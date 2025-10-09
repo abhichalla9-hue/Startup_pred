@@ -10,17 +10,17 @@ def index():
 def predict():
     
         # Extract features from the form
-    feature1=float(request.form['feature1'])
-    feature2=float(request.form['feature2'])
-    feature3=float(request.form['feature3'])
-    feature4=float(request.form['feature4'])
-    feature5=float(request.form['feature5'])
-    feature6=float(request.form['feature6'])
-    feature7=float(request.form['feature7'])
-    feature8=float(request.form['feature8'])
-    feature9=float(request.form['feature9'])
+    age_first_funding_year = float(request.form.get('feature1', 0))
+    age_last_funding_year = float(request.form.get('feature2', 0))
+    age_first_milestone_year = float(request.form.get('feature3', 0))
+    age_last_milestone_year = float(request.form.get('feature4', 0))
+    relationship = float(request.form.get('feature5', 0))
+    funding_rounds = float(request.form.get('feature6', 0))
+    funding_total_usd = float(request.form.get('feature7', 0))
+    milestones = float(request.form.get('feature8', 0))
+    avg_participants = float(request.form.get('feature9', 0))
     # create a list of input features
-    input_features = [[feature1, feature2, feature3, feature4, feature5, feature6, feature7, feature8, feature9]]
+    input_features = [[age_first_funding_year, age_last_funding_year, age_first_milestone_year, age_last_milestone_year, relationship, funding_rounds, funding_total_usd, milestones, avg_participants]]
     # Make prediction
     prediction = model.predict(input_features)
     # map the prediction to a human-readable label
