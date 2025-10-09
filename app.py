@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import joblib
 
 app = Flask(__name__)
-model = joblib.load('model_startup.pkl')
+model = joblib.load('random_forest_model.pkl')
 @app.route('/')
 def index():
     return render_template('index.html')
