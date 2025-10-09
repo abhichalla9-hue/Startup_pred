@@ -24,7 +24,7 @@ def predict():
     # Make prediction
     prediction = model.predict(input_features)
     # map the prediction to a human-readable label
-    prediction_label = 'Successful' if prediction[0] == 1 else 'Unsuccessful'
+    prediction_label = 'Acquired' if prediction[0] == 1 else 'closed'
     # Render the result template with the prediction
     return render_template('result.html', prediction=prediction_label)
 if __name__ == '__main__':
