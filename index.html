@@ -1,0 +1,47 @@
+<html>
+<head> <title>Startup Success Prediction</title>
+<style> body { font-family: Arial, sans-serif; margin: 4px; background-color: #f4f4f4; } 
+h1 { color: #333; } 
+.startup { background-color: #fff; padding: 10px; border-radius: 5px; box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto; } 
+input[type="text"] { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+button { background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; } 
+button:hover { background-color: #218838; } </style>
+</head>
+<body> <h1>Welcome to Startup Success Prediction</h1>
+<p>This web application predicts the success of a startup based on various features.</p>
+<div class="startup"> 
+<form action="{{url_for('predict')}}" method="post"> 
+<p>Age at First Funding Year:</p> 
+<input type="text" id="feature1" name="feature1">
+<p>Age at Last Funding Year:</p> 
+<input type="text" id="feature2" name="feature2">
+<p>Age at First Milestone Year:</p> 
+<input type="text" id="feature3" name="feature3"> 
+<p>Age at Last Milestone Year:</p> 
+<input type="text" id="feature4" name="feature4">
+<p>Number of Relationships:</p> 
+<input type="text" id="feature5" name="feature5">
+<p>Number of Funding Rounds:</p> 
+<input type="text" id="feature6" name="feature6"> 
+<p>Total Funding (in USD):</p>
+<input type="text" id="feature7" name="feature7"> 
+<p>Number of Milestones:</p> 
+<input type="text" id="feature8" name="feature8">
+<!--<p>is_CANADA:</p> <input type="text" id="feature9" name="feature9"><br><br> 
+<p>is_NEWYORK:</p> <input type="text" id="feature10" name="feature10"><br><br> 
+<p>is_MA:</p> <input type="text" id="feature11" name="feature11"><br><br> 
+<p>is_Texas:</p> <input type="text" id="feature12" name="feature12"><br><br> 
+<p>is_otherstate:</p> <input type="text" id="feature13" name="feature13"><br><br> 
+<p>has_VC:</p> <input type="text" id="feature14" name="feature14"><br><br> 
+<p>has_angel:</p> <input type="text" id="feature15" name="feature15"><br><br> 
+<p>has_roundA:</p> <input type="text" id="feature16" name="feature16"><br><br> 
+<p>has_roundB:</p> <input type="text" id="feature17" name="feature17"><br><br> 
+<p>has_roundC:</p> <input type="text" id="feature18" name="feature18"><br><br>
+<p>has_roundD:</p> <input type="text" id="feature19" name="feature19"><br><br> -->
+<p>Average Participants:</p> <input type="text" id="feature20" name="feature20">
+<!--<p>is_top500:</p> <input type="text" id="feature21" name="feature21"><br><br>-->
+<button type="submit">predict</button> 
+</form>
+</div> 
+</body> 
+</html>
